@@ -113,4 +113,7 @@ const promptIntern = () => {
         promptNextEmployee();
      })
 }
-
+//validation:
+//check the name is capitalized
+//check the aged provided are numbers / and office num 
+//check stings input if possible

@@ -1,34 +1,99 @@
-.team-heading {
-    background-color: #e84855;
-    color: #ffffff;
+body {
+	background: linear-gradient(-45deg, #ee765283, #e73c7e77, #23a5d57c, #23d5ab67);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
 }
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+.team-heading {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 110px;
+    box-shadow: 2px 2px 7px #222;
+    background-color: #5c5c5cdc;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 3px #2222224d;
+    border-radius: 0%;
+}
+
 .team-area {
     max-width: 1000px;
     margin: 3em auto;
     flex-wrap: wrap;
 }
+/* Glass effect */
+/* From https://css.glass */
 .employee-card {
+    padding: 15px !important;
     margin: 1em;
     max-width: 280px;
     width: 90%;
     min-height: 22rem;
-    background-color: #007bff;
     color: white;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);
-    border: none;
+    background: #94949434;
+    border: 1px solid grey !important;
+    border-radius: 15px !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
 }
+h1 {
+    padding: 10px 20px;
+    border: 2px solid #ffffff;
+    border-radius: 16px;
+}
+.employee-card h2 {
+    text-shadow: 2px 2px 3px #2222225b;
+    color: #fdfdfdf1;
 
+}
+.employee-card h3 {
+    color: #535353f5;
+}
+.card-header {
+    text-align: center;
+    background: #5a5a5a71;
+    border-radius: 16px !important;
+    border: solid 1px transparent
+}
 .card-body {
+    margin-top: 10px;
+    border-radius: 16px !important;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: #f6f7f8;
+    background:  #86868671;
 }
-
+.card-body ul li {
+    background: transparent;
+    border: 2px solid transparent;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+}
+li span {
+    font-weight: 500;
+}
+li a {
+    font-weight: 500;
+}
 .list-group-item {
-    color: #000000;
+    color: #000000d7;
     text-decoration: none;
 }
