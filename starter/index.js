@@ -9,9 +9,8 @@ const OUTPUT_DIR = path.resolve(__dirname, "output");
 const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const render = require("./src/page-template.js");
-
-
 // TODO: Write Code to gather information about the development team members, and render the HTML file.
+const team = [];
 inquirer.prompt([
     {
         type: 'input',
@@ -36,6 +35,7 @@ inquirer.prompt([
 ]).then(res => {
     // populate manager info
      const manager = new Manager(res.managerName, res.managerId, res.managerEmail, res.managerOfficeNo);
+     team.push(manager);
      promptNextEmployee();
 });
 
@@ -53,7 +53,7 @@ const promptNextEmployee = () => {
         } else if (res.employeeList === 'Intern') {
             promptIntern();
         } else {
-            console.log('here we should take the info from maganer, intern and engineer and using the page-template create a new html that includes each element')
+            fs.writeFile(outputPath, render(team), (err) => err ? console.log(err) : console.log('saved!'));
         }
         })
 };
@@ -81,6 +81,7 @@ const promptEngineer = () => {
         }
     ]).then(res => {
         const engineer = new Engineer(res.engineerName, res.engineerId, res.engineerEmail, res.engineerGithub );
+        team.push(engineer);
         promptNextEmployee();
      })
 }
@@ -108,6 +109,7 @@ const promptIntern = () => {
         }
     ]).then(res => {
         const intern = new Intern(res.internName, res.internId, res.internEmail, res.engineerSchool);
+        team.push(intern);
         promptNextEmployee();
      })
 }
