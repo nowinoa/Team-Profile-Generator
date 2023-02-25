@@ -1,0 +1,26 @@
+{
+  "devDependencies": {
+    "jest": "^29.4.3"
+  },
+  "dependencies": {
+    "inquirer": "^6.5.0"
+  },
+  "name": "team-profile-generator",
+  "description": "## Your Task",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nowinoa/Team-Profile-Generator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nowinoa/Team-Profile-Generator/issues"
+  },
+  "homepage": "https://github.com/nowinoa/Team-Profile-Generator#readme"
+}
