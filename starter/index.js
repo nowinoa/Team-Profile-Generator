@@ -108,7 +108,7 @@ const promptIntern = () => {
             name: 'internSchool'
         }
     ]).then(res => {
-        const intern = new Intern(res.internName, res.internId, res.internEmail, res.engineerSchool);
+        const intern = new Intern(res.internName, res.internId, res.internEmail, res.internSchool);
         team.push(intern);
         promptNextEmployee();
      })
