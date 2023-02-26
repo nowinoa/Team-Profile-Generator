@@ -10,6 +10,14 @@ const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const render = require("./src/page-template.js");
 // TODO: Write Code to gather information about the development team members, and render the HTML file.
+const numberValidation = numericValidation => ({
+            validate: (answer) => {
+            if (isNaN(answer)) {
+            return "please enter a number";
+            }
+            return true;
+            }
+})
 const team = [];
 inquirer.prompt([
     {
@@ -20,7 +28,8 @@ inquirer.prompt([
     {
         type: 'input',
         message: 'Can I get the manager\'s id?',
-        name: 'managerId'
+        name: 'managerId',
+        ...numberValidation()
     },
     {
         type: 'input',
@@ -30,7 +39,8 @@ inquirer.prompt([
     {
         type: 'input',
         message: 'Can I get the manager\'s office number?',
-        name: 'managerOfficeNo'
+        name: 'managerOfficeNo',
+        ...numberValidation()
     }
 ]).then(res => {
     // populate manager info
@@ -67,7 +77,8 @@ const promptEngineer = () => {
         {
             type: 'input',
             message: 'Can I get the engineer\'s id?',
-            name: 'engineerId'
+            name: 'engineerId',
+            ...numberValidation()
         },
         {
             type: 'input',
@@ -95,7 +106,8 @@ const promptIntern = () => {
         {
             type: 'input',
             message: 'Can I get the intern\'s id?',
-            name: 'internId'
+            name: 'internId',
+            ...numberValidation()
         },
         {
             type: 'input',

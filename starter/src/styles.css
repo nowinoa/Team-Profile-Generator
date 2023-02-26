@@ -35,7 +35,9 @@ body {
 }
 .card-header {
     text-align: center;
+    text-transform: capitalize;
 }
+
 .card-body {
     display: flex;
     flex-direction: column;
