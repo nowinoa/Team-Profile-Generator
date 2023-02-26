@@ -55,9 +55,7 @@ The Team Builder CLI Application uses Jest as a testing framework. To run the te
 2. Run npm run test to run all the tests. Alternatively, run npm run test filename to run a specific test file.
 3. Jest will execute the tests and output the results to the console.
 
-## Questions
-For any questions or issues feel free to contact me at: 
-
+## More Projects
 To explore more about my projects visit my profile :point_right: <a href="https://github.com/nowinoa">:computer:</a>
 
 © 2023 Ainhoa Prada. Confidential and Proprietary. All Rights Reserved.
